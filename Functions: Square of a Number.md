@@ -1,44 +1,44 @@
-## Functions: Square of a Number using Function in C
+## Looping: Print Odd Numbers from 1 to N in C
 ## Aim
-To write a C program that finds the square of a number using a function without arguments and without a return type.
+To write a C program that prints all odd numbers from 1 to n, where n is an integer input by the user.
 
 ## Algorithm
-Define a function square without parameters.
+Declare variables n and i.
 
-Inside the square function, declare variables n and b.
+Read the value of n from the user.
 
-Read an integer n from the user and calculate the square by multiplying n with itself.
+Iterate i from 1 to n using a for loop.
 
-Print the square value using printf with two decimal places.
+Inside the loop:
 
-In the main function, call the square function.
+If i is odd, print its value.
 
-Return 0 to indicate successful execution.
+Increment i to skip the next even number (can also increment by 2 for simplicity).
 
 ## Program
 ```
 #include <stdio.h>
-void square();
+
 int main() {
-    square();
-    return 0;
-}
-void square() {
-    int n;
-    float b;
-    printf("Enter an integer: ");
+    int n, i;
+    printf("Enter the value of n: ");
     scanf("%d", &n);
-    b = n * n;
-    printf("Square of %d is %.2f\n", n, b);
+    printf("Odd numbers from 1 to %d are:\n", n);
+    for (i = 1; i <= n; i += 2) {
+        printf("%d ", i);
+    }
+    printf("\n");
+    return 0;
 }
 ```
 
 ## Output
 ```
 Input:
-Enter an integer: 7
+Enter the value of n: 10
 Output:
-Square of 7 is 49.00
+Odd numbers from 1 to 10 are:
+1 3 5 7 9
 ```
 ## Result
-The above programme is executed and implemented.
+The above programme is implented and executed.
